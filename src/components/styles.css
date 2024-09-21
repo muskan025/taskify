@@ -8,8 +8,8 @@
 .input__box {
   width: 100%;
   border-radius: 50px;
-  padding: 20px 30px;
-  font-size: 25px;
+  padding: clamp(12px, 3vw, 20px) clamp(20px, 5vw, 30px);
+  font-size: clamp(16px, 2vw, 24px);
   border: none;
   transition: 0.2s;
   box-shadow: inset 0 0 5px black;
@@ -22,17 +22,16 @@
 
 .input_submit {
   position: absolute;
-  width: 50px;
-  height: 50px;
-  margin: 12px;
+  margin: clamp(8px, 1vw, 12px);
   border-radius: 50px;
-  right: 0px;
+  right: 0;
   border: none;
-  font-size: 15px;
+  font-size: clamp(12px, 1.5vw, 15px);
   background-color: #2f74c0;
   color: white;
   transition: 0.2s all;
   box-shadow: 0 0 10px black;
+  padding: clamp(10px, 2vw, 15px);
 }
 
 .input_submit:hover {
@@ -44,26 +43,33 @@
   box-shadow: 0 0 5px black;
 }
 
+.todo-container{
+  display: flex;
+  justify-content: center;
+  width:100%;
+}
 .todos {
   display: flex;
-  justify-content: space-evenly;
-  width: 90%;
+  justify-content: flex-start;
   flex-wrap: wrap;
+  gap: clamp(0.5rem, 2vw, 1rem);
+  width: 80%;
+  padding: clamp(10px, 2vw, 20px);
 }
 
 .todos__single {
   display: flex;
-  width: 29.5%;
+  width: clamp(200px, 45%, 300px);
   border-radius: 5px;
-  padding: 20px;
-  margin-top: 15px;
+  padding: clamp(15px, 2vw, 25px);
+  margin-top: clamp(10px, 1.5vw, 20px);
   background-image: url("https://img.freepik.com/free-photo/crumpled-yellow-paper-background-close-up_60487-2390.jpg?size=626&ext=jpg");
 }
 .todos__single--text {
   flex: 1;
-  padding: 5px;
+  padding: clamp(5px, 1vw, 10px);
   border: none;
-  font-size: 20px;
+  font-size: clamp(14px, 1.5vw, 18px);
 }
 
 .todos__single--text:focus {
@@ -71,25 +77,10 @@
 }
 
 .icon {
-  margin-left: 10px;
-  font-size: 25px;
+  margin-left: clamp(5px, 1vw, 10px);
+  font-size: clamp(18px, 1.8vw, 24px);
   cursor: pointer;
+  transition: 0.2s ease;
 }
 
-@media (max-width: 1200px) {
-  .todos__single {
-    width: 40%;
-  }
-}
-
-@media (max-width: 700px) {
-  .input {
-    width: 95%;
-  }
-  .todos {
-    width: 95%;
-  }
-  .todos__single {
-    width: 100%;
-  }
-}
+ 
