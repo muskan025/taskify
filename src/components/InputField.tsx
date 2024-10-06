@@ -11,7 +11,6 @@ const InputField = ({ todo, setTodo, handleAdd }: Props) => {
   const inputRef = useRef<HTMLInputElement>(null);
 
   return (
-    <div>
       <form
         className="input"
         onSubmit={(e) => {
@@ -31,7 +30,7 @@ const InputField = ({ todo, setTodo, handleAdd }: Props) => {
           Go
         </button>
       </form>
-    </div>
+    
   );
 };
 

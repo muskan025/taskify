@@ -34,7 +34,7 @@ const SingleTodo = ({ todo, todos, setTodos }: Props) => {
 e.preventDefault();
 
 setTodos(todos.map((todo)=>(
-    todo.id===id?{...todo,todo:editTodo}:todo
+    todo.id===id?{...todo,todo:editTodo}:todo 
 )))
 setEdit(false)
 
@@ -48,7 +48,7 @@ setEdit(false)
           type="text"
           value={editTodo}
           onChange={(e) => setEditTodo(e.target.value)}
-          className="todo__single--text"
+          className="todos__single--text"
           ref={inputRef}
         />
       ) : todo.isDone ? (
